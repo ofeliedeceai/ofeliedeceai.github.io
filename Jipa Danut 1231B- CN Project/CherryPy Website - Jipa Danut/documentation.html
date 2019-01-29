@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Natural Treatments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{box-sizing: border-box;}
+    body{font-family: Arial, Helvetiva, sans-serif;
+        font-size: 28px;
+        background-color: whitesmoke;
+    }
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color: #333;
+        position: sticky;
+        top:0;
+    }
+    li{
+        float:left;
+    }
+    li a{
+        display:block;
+        color: white;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
+    }
+    .active, .btn:hover {
+        background-color: gold;
+        color: black;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h2 style="font-family: 'Autour One'">Natural Treatments</h2>
+</div>
+
+<ul id="navBar">
+    <li><a class="btn" href="index">Home</a></li>
+    <li><a class="btn" href="treatments">Natural Treatments</a></li>
+    <li><a class="btn" href="food">Food</a></li>
+    <li style="float:right"><a class="btn active" href="documentation">Documentation</a></li>
+</ul>
+
+<h2 style="font-family: 'Autour One'" align="center">Documentation for my website and Android application</h2>
+<br><br>
+<h3>For my website I used CherryPy along with HTML, CSS, Jinja and a bit of JavaScript.</h3>
+- CherryPy was used as a skeleton for my webpages, so I can serve team easily to the Python webserver<br><br>
+- Jinja2 was used to easily load my webpages into cherrypy functions by using the template environment it offers<br><br>
+- HTML stands at the core of the website, being used to design the webpages<br><br>
+- CSS was used for the styling of the different html elements and also to make my Navbar stick to the screen
+when scrolling<br><br>
+- JavaScript was used only to create a script for my NavBar buttons in order to make them active/inactive, so that
+the user is shown on which page he currently is on<br><br>
+The website has a section about Natural Treatments for most common health issues, a Food section in which you can find
+all sorts of healthy food, and a Documentation section in which I present documentation for my website and android
+application<br><br>
+A public link to the website can be found here(without the documentation):<a href="https://ofeliedeceai.github
+.io/" target="_blank">https://ofeliedeceai.github.io/</a><br><br>
+
+<h3>For my Android application I used Java + XML and a lot of imports.</h3>
+- Java was the main part of the project, being used for my MainActivity and ChatMessage classes. The
+MainActivity class is the one that drives the whole application, by checking for user sign in status, displaying the
+start page, the chat window, the sign out menu and also the input box and send button. The ChatMessage class holds
+all information of a chat message: the username, text, date and time it was sent.
+<br><br>
+- XML was used for the design of my app. I used an activity_main.xml, for the start page of the app, message.xml for
+designing the chat window and a small main_menu.xml to design a simple Log Out menu<br><br>
+My application uses an Email/Password authentication method, so when the user first starts the app, the app
+checks if the user already has an account by calling the FirebaseAuth.getInstance().getCurrentUser() functions. If
+the user is not signed in, they will be prompted to either enter an existing account or create a new one. After the
+user signs in the application, they are now sent to the chat window. Here they can type a message and tap the
+FloatingActionButton(FAB) in order to send it. A message has a username and an exact date of when it was sent.
+The user can also opt to sign out by tapping the 3 dots in the top-right corner of the screen and then 'Sign Out'.
+The app will close when the user Signs Out. More users can chat together if they all have this app installed.
+<script>
+    // Get the container element
+var btnContainer = document.getElementById("navBar");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>

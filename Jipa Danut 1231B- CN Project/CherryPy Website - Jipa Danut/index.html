@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Natural Treatments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{box-sizing: border-box;}
+    body{font-family: Arial, Helvetiva, sans-serif;
+        font-size: 28px;
+        background-color: forestgreen;
+    }
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color: #333;
+        position: sticky;
+        top:0;
+    }
+    li{
+        float:left;
+    }
+    li a{
+        display:block;
+        color: white;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
+    }
+    .active, .btn:hover {
+        background-color: gold;
+        color: black;
+    }
+     /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+    float:left;
+    width: 50%;
+    padding: 5px;
+    }
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h2 style="font-family: 'Autour One'">Natural Treatments</h2>
+</div>
+
+<ul id="navBar">
+    <li><a class="btn active" href="index">Home</a></li>
+    <li><a class="btn" href="treatments">Natural Treatments</a></li>
+    <li><a class="btn" href="food">Food</a></li>
+    <li style="float:right"><a class="btn" href="documentation">Documentation</a></li>
+</ul>
+ <div class="row">
+  <div class="column">
+    <img src="https://www.consciouslifestylemag.com/wp-content/uploads/2015/12/natural-remedies-for-inflammation-and-pain.jpg"
+         alt="img1" style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+  <div class="column">
+    <img src="https://www.verywellhealth.com/thmb/bzegLS0791ZiU6tX7mWMyF1Cg9Q=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/iStock_77442767_XLARGE-57fc0c535f9b586c35cab765.jpg" alt="img2"
+         style="float: left;width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+   <div class="column">
+    <img src="https://www.zliving.com/wp-content/uploads/2018/02/naturalremediesforcough.jpg" alt="img3"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="http://www.tiffanysbakingco.com/wp-content/uploads/2018/06/NaturalRemedies.jpg" alt="img4"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="https://ehealth.eletsonline.com/wp-content/uploads/2018/11/natural-remedies-health.jpg" alt="img5"
+          style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="https://civilizedcavemancooking.com/wp-content/uploads/2016/04/Natural-Remedies-02.png" alt="img6"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="https://wellnessmama.com/wp-content/uploads/natural-remedies-recover-illness-faster.jpg" alt="img7"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="https://c0.piktochart.com/v2/uploads/543ae1b2-f2b5-4db4-93e9-1abbc7c38661/5f72c424e5b3f97b5ff22193aee8e929893a2cf0_original.jpg?1525513545"  alt="img8"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="http://trustednaturalhealth.com/wp-content/uploads/2017/01/Herbal-Natural-Remedies.jpg" alt="img9"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+  </div>
+      <div class="column">
+    <img src="https://i.pinimg.com/736x/87/36/b6/8736b666d55880dbb3811a99560a8820.jpg" alt="img10"
+         style="float: left; width:100%; height: 15em; margin-bottom: 0.5em;">
+      </div>
+</div>
+
+
+<script>
+    // Get the container element
+var btnContainer = document.getElementById("navBar");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
