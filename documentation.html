@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Natural Treatments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{box-sizing: border-box;}
+    body{font-family: Arial, Helvetiva, sans-serif;
+        font-size: 28px;
+        background-color: forestgreen;
+    }
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color: #333;
+        position: sticky;
+        top:0;
+    }
+    li{
+        float:left;
+    }
+    li a{
+        display:block;
+        color: white;
+        text-align:center;
+        padding:14px 16px;
+        text-decoration:none;
+    }
+    .active, .btn:hover {
+        background-color: gold;
+        color: black;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h2 style="font-family: 'Autour One'">Natural Treatments</h2>
+</div>
+
+<ul id="navBar">
+    <li><a class="btn" href="index">Home</a></li>
+    <li><a class="btn" href="treatments">Natural Treatments</a></li>
+    <li><a class="btn" href="food">Food</a></li>
+    <li style="float:right"><a class="btn active" href="documentation">Documentation</a></li>
+</ul>
+
+<script>
+    // Get the container element
+var btnContainer = document.getElementById("navBar");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
